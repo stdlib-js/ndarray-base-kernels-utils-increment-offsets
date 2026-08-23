@@ -45,32 +45,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/ndarray-base-kernels-utils-increment-offsets
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var incrementOffsets = require( '@stdlib/ndarray-base-kernels-utils-increment-offsets' );
+import incrementOffsets from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-kernels-utils-increment-offsets@esm/index.mjs';
 ```
 
 #### incrementOffsets( offsets, inc )
@@ -117,13 +99,18 @@ The function supports the following parameters:
 
 <!-- eslint-disable new-cap -->
 
-```javascript
-var zeros = require( '@stdlib/ndarray-zeros' );
-var slice = require( '@stdlib/ndarray-slice' );
-var E = require( '@stdlib/slice-multi' );
-var ndarraylike2descriptor = require( '@stdlib/ndarray-base-ndarraylike2descriptor' );
-var getOffsets = require( '@stdlib/ndarray-base-offsets' );
-var incrementOffsets = require( '@stdlib/ndarray-base-kernels-utils-increment-offsets' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@esm/index.mjs';
+import slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice@esm/index.mjs';
+import E from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@esm/index.mjs';
+import ndarraylike2descriptor from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ndarraylike2descriptor@esm/index.mjs';
+import getOffsets from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-offsets@esm/index.mjs';
+import incrementOffsets from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-kernels-utils-increment-offsets@esm/index.mjs';
 
 // Create an array:
 var x = zeros( [ 3, 3, 3 ] );
@@ -149,6 +136,10 @@ console.log( offsets );
 // Adjust the offsets:
 var out = incrementOffsets( offsets, [ 0, 9, 18 ] );
 console.log( out );
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -180,7 +171,7 @@ console.log( out );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
